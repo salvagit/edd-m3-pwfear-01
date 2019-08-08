@@ -10,19 +10,10 @@ export default class Button extends Component {
     };
   }
 
-  handleClick() {
-    let color = COLORS[Math.floor(Math.random() * COLORS.length)];
-    console.log(color);
-    this.setState({ color });
-  }
-
   render() {
-    const { text } = this.props;
+    const { text, onClick, backgroundColor } = this.props;
     return (
-      <button
-        style={{ backgroundColor: this.state.color }}
-        onClick={() => this.handleClick()}
-      >
+      <button style={{ backgroundColor }} onClick={onClick}>
         {text}
       </button>
     );

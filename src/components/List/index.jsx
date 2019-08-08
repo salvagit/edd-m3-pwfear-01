@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "../Button";
 
 class List extends Component {
   state = {
@@ -7,7 +8,7 @@ class List extends Component {
   };
 
   handleOnChangeInput(evt) {
-    this.setState({ value: evt.target.value });
+    this.setState({ value: evt.target.value }, console.log(this.state));
   }
 
   handleOnClickButton(evt) {
@@ -25,14 +26,16 @@ class List extends Component {
             onChange={evt => this.handleOnChangeInput(evt)}
             value={this.state.value}
           />
-          <button onClick={evt => this.handleOnClickButton(evt)}>
-            agregar
-          </button>
+          <Button
+            text="Agregar"
+            onClick={evt => this.handleOnClickButton(evt)}
+            backgroundColor="gray"
+          />
         </form>
         <ul>
-          {this.state.elements.map((el, index) => (
-            <li key={index}>{el}</li>
-          ))}
+          {this.state.elements.map((el, index) => {
+            return <li key={index}>{el}</li>;
+          })}
         </ul>
       </div>
     );
