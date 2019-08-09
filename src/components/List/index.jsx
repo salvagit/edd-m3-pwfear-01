@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "../Button";
+import Input from "../Input";
 
 class List extends Component {
   state = {
@@ -21,7 +22,7 @@ class List extends Component {
     return (
       <div>
         <form action="#">
-          <input
+          <Input
             type="text"
             onChange={evt => this.handleOnChangeInput(evt)}
             value={this.state.value}

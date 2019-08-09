@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-const COLORS = ["blue", "pink", "green"];
-
 export default class Button extends Component {
   constructor(props) {
     super(props);
