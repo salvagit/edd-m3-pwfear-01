@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import "./styles.css";
 
-const Menu = () => {
+const Menu = memo(() => {
   return (
     <div>
       <ul>
@@ -11,6 +11,6 @@ const Menu = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default Menu;
