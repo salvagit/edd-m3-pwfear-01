@@ -14,8 +14,11 @@ class List extends Component {
 
   handleOnClickButton(evt) {
     evt.preventDefault();
-    this.state.elements.push(this.state.value);
-    this.setState({ value: "" });
+    const { elements, value } = this.state;
+    if (!elements.includes(value)) {
+      elements.push(value);
+      this.setState({ value: "" });
+    }
   }
 
   render() {
