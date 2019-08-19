@@ -1,19 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import { Button } from "react-bootstrap";
 
-export default class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: "red"
-    };
-  }
-
-  render() {
-    const { text, onClick, backgroundColor } = this.props;
-    return (
-      <button style={{ backgroundColor }} onClick={onClick}>
-        {text}
-      </button>
-    );
-  }
-}
+export default ({ text, onClick, ...props }) => (
+  <Button onClick={onClick} {...props}>
+    {text}
+  </Button>
+);

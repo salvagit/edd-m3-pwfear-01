@@ -1,14 +1,18 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Navbar from "../NavBar";
 import Menu from "../Menu";
 
 const Layout = props => (
-  <div className="App">
+  <div>
     <Navbar />
-    <div className="container">
-      <Menu />
-      {props.children}
-    </div>
+    <Container />
+    <Row>
+      <Col md={4}>
+        <Menu />
+      </Col>
+      <Col md={8}>{props.children}</Col>
+    </Row>
   </div>
 );
 

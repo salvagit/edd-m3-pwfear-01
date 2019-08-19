@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Form } from "react-bootstrap";
 
-const Input = ({ type, onChange, value }) => (
-  <input type={type} onChange={onChange} value={value} />
+const Input = ({ type, onChange, value, ...props }) => (
+  <Form.Control type={type} onChange={onChange} value={value} {...props} />
 );
 
 Input.propTypes = {

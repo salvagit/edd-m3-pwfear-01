@@ -1,27 +1,12 @@
 import React from "react";
-import "./styles.css";
+import { Navbar, Container } from "react-bootstrap";
 
-const NavBar = () => {
+export default () => {
   return (
-    <nav className="">
-      <div className="nav-wrapper">
-        <a href="/" className="brand-logo center">
-          {" "}
-        </a>
-        <a href="#!" data-target="mobile-nav" className="sidenav-trigger">
-          <i className="material-icons">menu</i>
-        </a>
-        <ul className="hide-on-med-and-down left">
-          <li>
-            <a href="/">Getting started</a>
-          </li>
-          <li>
-            <a href="components.html">Components</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Navbar expand="lg" variant="dark" bg="dark">
+      <Container>
+        <Navbar.Brand href="/">Navbar</Navbar.Brand>
+      </Container>
+    </Navbar>
   );
 };
-
-export default NavBar;
