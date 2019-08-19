@@ -3,15 +3,17 @@ import "./styles.css";
 
 const NavBar = () => {
   return (
-    <nav class="">
-      <div class="nav-wrapper">
-        <a class="brand-logo center" />
-        <a href="#!" data-target="mobile-nav" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
+    <nav className="">
+      <div className="nav-wrapper">
+        <a href="/" className="brand-logo center">
+          {" "}
         </a>
-        <ul class="hide-on-med-and-down left">
+        <a href="#!" data-target="mobile-nav" className="sidenav-trigger">
+          <i className="material-icons">menu</i>
+        </a>
+        <ul className="hide-on-med-and-down left">
           <li>
-            <a>Getting started</a>
+            <a href="/">Getting started</a>
           </li>
           <li>
             <a href="components.html">Components</a>
