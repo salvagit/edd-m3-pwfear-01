@@ -1,19 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import { Button } from "react-materialize";
 
-export default class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: "red"
-    };
-  }
-
-  render() {
-    const { text, onClick, backgroundColor } = this.props;
-    return (
-      <button style={{ backgroundColor }} onClick={onClick}>
-        {text}
-      </button>
-    );
-  }
-}
+export default ({ text, onClick }) => (
+  <Button waves="light" onClick={onClick}>
+    {text}
+  </Button>
+);

@@ -1,26 +1,13 @@
 import React from "react";
+import { Navbar as NavbarMaterialize, NavItem } from "react-materialize";
 import "./styles.css";
 
 const NavBar = () => {
   return (
-    <nav className="">
-      <div className="nav-wrapper">
-        <a href="/" className="brand-logo center">
-          {" "}
-        </a>
-        <a href="#!" data-target="mobile-nav" className="sidenav-trigger">
-          <i className="material-icons">menu</i>
-        </a>
-        <ul className="hide-on-med-and-down left">
-          <li>
-            <a href="/">Getting started</a>
-          </li>
-          <li>
-            <a href="components.html">Components</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <NavbarMaterialize brand={<NavItem>Todo List</NavItem>} centerLogo>
+      <NavItem>Item 1</NavItem>
+      <NavItem>Item 2</NavItem>
+    </NavbarMaterialize>
   );
 };
 

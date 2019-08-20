@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { TextInput } from "react-materialize";
 
 const Input = ({ type, onChange, value }) => (
-  <input type={type} onChange={onChange} value={value} />
+  <TextInput
+    type={type}
+    onChange={onChange}
+    value={value}
+    placeholder="ingrese tarea."
+  />
 );
 
 Input.propTypes = {
