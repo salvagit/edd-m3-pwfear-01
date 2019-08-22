@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Row } from "react-materialize";
-import Button from "../Button";
-import Input from "../Input";
+import ListForm from "./ListForm";
 import ListElement from "./ListElement";
 import "./styles.css";
 
@@ -30,20 +28,12 @@ const List = () => {
 
   return (
     <div className="row s12">
-      <form action="#">
-        <Row className="form-container">
-          <Input
-            type="text"
-            onChange={evt => handleOnChangeInput(evt)}
-            value={value}
-          />
-          <Button
-            text="Agregar"
-            onClick={evt => handleOnClickButton(evt)}
-            backgroundColor="gray"
-          />
-        </Row>
-      </form>
+      <ListForm
+        value={value}
+        handleOnChangeInput={handleOnChangeInput}
+        handleOnClickButton={handleOnClickButton}
+      />
+
       <ul>
         {console.log(state, setState)}
         {elements.map((el, index) => {
