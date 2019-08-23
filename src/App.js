@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "./components/Layout";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 import "./App.css";
 
@@ -7,9 +9,11 @@ import List from "./components/List";
 
 function App() {
   return (
-    <Layout>
-      <List />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <List />
+      </Layout>
+    </Provider>
   );
 }
 
