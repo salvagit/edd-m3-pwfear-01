@@ -6,6 +6,6 @@ import "./App.css";
 
 export default () => (
   <Provider store={store}>
-    <App />>
+    <App />
   </Provider>
 );
