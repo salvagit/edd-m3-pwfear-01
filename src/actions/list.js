@@ -14,7 +14,6 @@ export const onAddElementError = error => ({ type: ADD_ELEMENT_ERROR, error });
 export const addElement = element => dispatch => {
   dispatch(onAddElementStart());
   try {
-    console.log("ADDELEMENT ACTION", element);
     dispatch(onAddElementSuccess(element));
   } catch (e) {
     dispatch(onAddElementError(e));

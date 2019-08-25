@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { Row, Col } from "react-materialize";
 
 import { addElement } from "../../actions/list";
-import Layout from "../Layout";
-import List from "../List";
-import ListForm from "../ListForm";
+import Layout from "../../components/Layout";
+import List from "../../components/List";
+import ListForm from "../../components/ListForm";
 
 const ListElements = ({ elements, addElement }) => (
   <Layout>
