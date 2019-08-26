@@ -5,11 +5,13 @@ import ShopItem from "./ShopItem";
 const items = [
   {
     title: "Item 1",
+    id: 1,
     image: "https://materializecss.com/images/yuna.jpg",
     description: "Description 1"
   },
   {
     title: "Item 2",
+    id: 2,
     image: "https://materializecss.com/images/yuna.jpg",
     description: "Description 2",
     star: true
