@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   elements: []
 };
 
-const List = ({ addElement, elements, store }) => {
+const List = ({ addElement, elements }) => {
   const [state, setState] = useState(INITIAL_STATE);
 
   const handleOnChangeInput = evt => {
@@ -39,7 +39,6 @@ const List = ({ addElement, elements, store }) => {
       />
 
       <ul>
-        {console.log(store)}
         {elements.map((el, index) => {
           return <ListElement key={index} el={el} />;
         })}
@@ -49,8 +48,7 @@ const List = ({ addElement, elements, store }) => {
 };
 
 const mapStateToProps = state => ({
-  elements: state.list.elements,
-  store: state
+  elements: state.list.elements
 });
 
 const mapDispatchToProps = dispatch => ({
