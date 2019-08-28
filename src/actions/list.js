@@ -1,7 +1,8 @@
 import {
   ADD_ELEMENT_START,
   ADD_ELEMENT_SUCCESS,
-  ADD_ELEMENT_ERROR
+  ADD_ELEMENT_ERROR,
+  REMOVE_ELEMENT
 } from "./types";
 
 export const onAddElementStart = () => ({ type: ADD_ELEMENT_START });
@@ -11,6 +12,11 @@ export const onAddElementSuccess = data => ({
 });
 export const onAddElementError = error => ({ type: ADD_ELEMENT_ERROR, error });
 
+export const onRemoveElement = element => ({
+  type: REMOVE_ELEMENT,
+  element
+});
+
 export const addElement = element => dispatch => {
   dispatch(onAddElementStart());
   try {
@@ -19,4 +25,8 @@ export const addElement = element => dispatch => {
   } catch (e) {
     dispatch(onAddElementError(e));
   }
+};
+
+export const removeElement = element => dispatch => {
+  dispatch(onRemoveElement(element));
 };

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Button from "../Button";
 const ListElementFunc = ({ index, el }) => <li key={index}>{el}</li>;
 
 class ListElement extends Component {
@@ -8,8 +8,12 @@ class ListElement extends Component {
   }
 
   render() {
-    const { index, el } = this.props;
-    return <li key={index}>{el}</li>;
+    const { index, el, removeElement } = this.props;
+    return (
+      <li key={index}>
+        {el} <Button onClick={() => removeElement(el)}>eliminar</Button>
+      </li>
+    );
   }
 }
 

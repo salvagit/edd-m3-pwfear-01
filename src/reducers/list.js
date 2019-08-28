@@ -1,7 +1,8 @@
 import {
   ADD_ELEMENT_START,
   ADD_ELEMENT_SUCCESS,
-  ADD_ELEMENT_ERROR
+  ADD_ELEMENT_ERROR,
+  REMOVE_ELEMENT
 } from "../actions/types";
 
 const initialState = {
@@ -16,6 +17,10 @@ export default function(state = initialState, action) {
       return { ...state, elements: [...state.elements, action.data] };
     case ADD_ELEMENT_ERROR:
       return { ...state };
+
+    case REMOVE_ELEMENT:
+      const elements = state.elements.filter(el => el !== action.element);
+      return { ...state, elements };
 
     default:
       return state;

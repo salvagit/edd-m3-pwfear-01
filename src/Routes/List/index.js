@@ -5,13 +5,13 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import ListForm from "../../components/ListForm";
 
-import { addElement } from "../../actions/list";
+import { addElement, removeElement } from "../../actions/list";
 
-const ListRoute = ({ addElement, elements }) => {
+const ListRoute = ({ addElement, elements, removeElement }) => {
   return (
     <Layout>
       <ListForm elements={elements} addElement={addElement} />
-      <List elements={elements} />
+      <List elements={elements} removeElement={removeElement} />
     </Layout>
   );
 };
@@ -21,7 +21,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addElement: element => dispatch(addElement(element))
+  addElement: element => dispatch(addElement(element)),
+  removeElement: element => dispatch(removeElement(element))
 });
 
 export default connect(
