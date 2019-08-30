@@ -1,21 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
+import { CollectionItem } from "react-materialize";
+
 import Button from "../Button";
-const ListElementFunc = ({ index, el }) => <li key={index}>{el}</li>;
 
-class ListElement extends Component {
-  componentWillMount() {
-    console.log("ya me dibuje.");
-  }
-
-  render() {
-    const { index, el, removeElement } = this.props;
-    return (
-      <li key={index}>
-        {el} <Button onClick={() => removeElement(el)}>eliminar</Button>
-      </li>
-    );
-  }
-}
+const ListElement = ({ index, el, removeElement }) => (
+  <CollectionItem key={index}>
+    {el.title} <Button onClick={() => removeElement(el)}>eliminar</Button>
+  </CollectionItem>
+);
 
 export default ListElement;
-export { ListElementFunc };

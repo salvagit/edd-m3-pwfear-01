@@ -3,10 +3,12 @@ import Navbar from "../NavBar";
 
 const Layout = props => (
   <div className="App">
-    <Navbar />
-    <div className="row">
-      <div className="row container s12">{props.children}</div>
-    </div>
+    <Navbar title={props.title} />
+    {/* <div className="row">
+      <div className="row container s12">
+      </div>
+    </div> */}
+    {props.children}
   </div>
 );
 

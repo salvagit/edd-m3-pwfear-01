@@ -9,7 +9,7 @@ import { addElement, removeElement } from "../../actions/list";
 
 const ListRoute = ({ addElement, elements, removeElement }) => {
   return (
-    <Layout>
+    <Layout title="List">
       <ListForm elements={elements} addElement={addElement} />
       <List elements={elements} removeElement={removeElement} />
     </Layout>
